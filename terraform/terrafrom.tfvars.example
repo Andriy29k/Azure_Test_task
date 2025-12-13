@@ -1,0 +1,28 @@
+APP_ID                  = ""
+AZ_PASSWORD             = ""
+TENANT_ID               = ""
+SUBSCRIPTION_ID         = ""
+
+location                = ""
+backend_zone            = ""
+database_zone           = ""
+vm_size                 = ""
+resource_group_name     = ""
+backend_name            = ""
+backend_admin           = ""
+public_key_backend      = ""
+database_name           = ""
+public_key_database     = ""
+database_admin          = ""
+
+// False - enabled, true - disabled
+password_authentication = true/false
+network_name            = ""
+network_subnet_name     = ""
+
+storage_account_type    = ""
+publisher               = ""
+offer                   = ""
+sku                     = ""
+
+
