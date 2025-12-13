@@ -12,29 +12,43 @@ variable "backend_admin" {
 }
 
 variable "publisher" {
-    type = string
+  type = string
 }
 
 variable "offer" {
-    type = string
+  type = string
 }
 
 variable "sku" {
-    type = string
+  type = string
 }
 
 variable "storage_account_type" {
-    type = string
+  type = string
 }
 
-variable "version" {
-    type = string
-}
 
 variable "public_key_backend" {
   type = string
 }
 
 variable "password_authentication" {
-    type = string
+  type = string
 }
+
+variable "resource_group_name" {
+  type = string
+}
+
+variable "location" {
+  type = string
+}
+
+variable "network_interface_id" {
+  type = string
+}
+
+variable "backend_zone" {
+  type = string
+}
+

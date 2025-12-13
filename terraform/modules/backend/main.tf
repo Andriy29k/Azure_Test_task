@@ -1,17 +1,18 @@
 resource "azurerm_linux_virtual_machine" "backend" {
-  name                  = var.backend_name
-  location              = azurerm_resource_group.rg.location
-  resource_group_name   = azurerm_resource_group.rg.name
-  network_interface_ids = [azurerm_network_interface.backend_network_interface.id]
-  admin_username = var.backend_admin
-  size                  = var.vm_size
-disable_password_authentication = var.password_authentication
+  name                            = var.backend_name
+  location                        = var.location
+  resource_group_name             = var.resource_group_name
+  network_interface_ids           = [var.network_interface_id]
+  admin_username                  = var.backend_admin
+  size                            = var.vm_size
+  disable_password_authentication = var.password_authentication
+  zone                            = var.backend_zone
 
   source_image_reference {
     publisher = var.publisher
     offer     = var.offer
     sku       = var.sku
-    version   = var.version
+    version   = "latest"
   }
 
   os_disk {
@@ -20,6 +21,6 @@ disable_password_authentication = var.password_authentication
   }
   admin_ssh_key {
     username   = var.backend_admin
-    public_key = var.public_key_backend
+    public_key = file(var.public_key_backend)
   }
 }

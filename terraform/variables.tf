@@ -1,13 +1,17 @@
 variable "APP_ID" {
-  default = APP_ID
+  type = string
 }
 
 variable "AZ_PASSWORD" {
-  default = AZ_PASSWORD
+  type = string
 }
 
 variable "TENANT_ID" {
-  default = TENANT_ID
+  type = string
+}
+
+variable "SUBSCRIPTION_ID" {
+  type = string
 }
 
 variable "location" {
@@ -60,25 +64,26 @@ variable "public_key_backend" {
 }
 
 variable "publisher" {
-    type = string
+  type = string
 }
 
 variable "offer" {
-    type = string
+  type = string
 }
 
 variable "sku" {
-    type = string
+  type = string
 }
 
 variable "storage_account_type" {
-    type = string
+  type = string
 }
 
-variable "version" {
-    type = string
+variable "backend_zone" {
+  type = string
 }
 
-variable "disk_size_gb" {
-  type = number
+variable "database_zone" {
+  type = string
 }
+

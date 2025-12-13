@@ -32,5 +32,21 @@ variable "storage_account_type" {
 }
 
 variable "public_key_database" {
-    type = string
+  type = string
+}
+
+variable "resource_group_name" {
+  type = string
+}
+
+variable "location" {
+  type = string
+}
+
+variable "network_interface_id" {
+  type = string
+}
+
+variable "database_zone" {
+  type = string
 }
