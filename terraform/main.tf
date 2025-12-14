@@ -50,3 +50,15 @@ module "database" {
   network_interface_id    = module.vpc.database_interface_ids
   depends_on              = [module.vpc]
 }
+
+module "ssh_config" {
+  source              = "./modules/ssh_config"
+  backend_admin       = var.backend_admin
+  database_admin      = var.database_admin
+  backend_hostname    = module.vpc.backend_public_ip
+  database_hostname   = module.vpc.database_public_ip
+  public_key_backend  = var.public_key_backend
+  public_key_database = var.public_key_database
+  depends_on          = [module.backend, module.database]
+  ssh_config_path     = var.ssh_config_path
+}

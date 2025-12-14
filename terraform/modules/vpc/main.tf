@@ -49,6 +49,19 @@ resource "azurerm_network_security_group" "backend_network_security_group" {
     source_address_prefix      = "Internet"
     destination_address_prefix = "*"
   }
+
+  security_rule {
+    name                       = "Tomcat"
+    priority                   = 1003
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "8080"
+    source_address_prefix      = "Internet"
+    destination_address_prefix = "*"
+  }
+  
 }
 
 resource "azurerm_network_interface" "backend_network_interface" {
@@ -115,7 +128,7 @@ resource "azurerm_network_security_group" "database_network_security_group" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "3306"
-    source_address_prefix      = azurerm_network_interface.backend_network_interface.private_ip_address
+    source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
 }

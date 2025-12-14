@@ -87,3 +87,7 @@ variable "database_zone" {
   type = string
 }
 
+variable "ssh_config_path" {
+    type = string
+    default = "~/.ssh/config"
+}

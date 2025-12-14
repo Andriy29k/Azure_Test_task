@@ -1,24 +1,24 @@
 output "backend_admin" {
-  value = module.backend.backend_admin
+  value = var.backend_admin
 }
 
 output "backend_key" {
-  value = module.backend.public_key_backend
+  value = var.public_key_backend
 }
 
 output "database_admin" {
-  value = module.database.database_admin
+  value = var.database_admin
 }
 
 output "database_key" {
-  value = module.database.public_key_database
-}
-
-output "backend_public_ip" {
-  value = module.backend.backend_public_ip
+  value = var.public_key_database
 }
 
 output "database_public_ip" {
-  value = module.database.database_public_ip
+  value = module.vpc.database_public_ip
+}
+
+output "backend_public_ip" {
+  value = module.vpc.backend_public_ip
 }
 
