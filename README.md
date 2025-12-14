@@ -26,7 +26,7 @@ Students functionality:
 2. Install Azure CLI using bash '''curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash'''.
 3. 
 4. Generate 2 ssh keys for backend and database.
-5. Use your variables by replacing or by filling values.
+5. Use your variables by replacing or by filling values in terraform.tfvars.example.
 6. Fill your password to environment variables: '''export DATABASE_PASSWORD=<YOUR_VALUE>'''
 7. Go to application directory and run '''bash ./deploy.sh
 8. Go to '''backend_ip:8080'''
