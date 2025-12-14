@@ -24,7 +24,9 @@ Students functionality:
 
 1. Create in Azure portal or Azure CLI on cloud create Service Principal.
 2. Install Azure CLI using bash ```curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash```.
-3. 
+3. In Azure portal or using command
+```az ad sp create-for-rbac --name myServicePrincipalName1 --role reader --scopes /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG1`` create service principal and add roles 
+```az role assignment create --assignee <YOUR_SERVICE_PRINCIPAL_OBJECT_ID> --role "Contributor" --scope "<YOUR_SUBSCRIPTION_ID"``` 
 4. Generate 2 ssh keys for backend and database.
 5. Use your variables by replacing or by filling values in ```terraform.tfvars.example```.
 6. Fill your password to environment variables: ```export DATABASE_PASSWORD=<YOUR_VALUE>```
