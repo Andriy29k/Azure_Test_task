@@ -28,7 +28,7 @@ Students functionality:
 3. Add contributor role to service principal object using command in Azure CLI 
 ```az role assignment create --assignee <YOUR_SERVICE_PRINCIPAL_OBJECT_ID> --role "Contributor" --scope "<YOUR_SUBSCRIPTION_ID>"```, or add using Azure portal
 4. Install Azure CLI using bash ```curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash```. (Optional)
-5. Login in Azure CLI using command ```az login --service-principal --username <YOUR_APP_ID> --password <YOUR_CLIENT_SECRET> --tenant <YOUR_TENANT_ID>```
+5. Login in Azure CLI using command ```az login --service-principal --username <YOUR_APP_ID> --password <YOUR_CLIENT_SECRET> --tenant <YOUR_TENANT_ID>``` (Optinal)
 6. Generate 2 ssh keys for backend and database.
 7. Use your variables by replacing or by filling values in ```terraform.tfvars.example```.
 8. Fill your password to environment variables: ```export DATABASE_PASSWORD=<YOUR_VALUE>```
