@@ -42,7 +42,7 @@ fi
 
 sudo tee "/etc/systemd/system/backend.service" > /dev/null <<EOF
 [Unit]
-Description=eSchool Spring Boot Backend
+Description=eSchool Backend
 After=network.target
 
 [Service]
