@@ -28,7 +28,7 @@ DATASOURCE_USERNAME=${DATABASE_USER}
 DATASOURCE_PASSWORD=${DATABASE_PASSWORD}
 EOL
 
-scp -o StrictHostKeyChecking=no .backend_env setup_backend.sh auto_startup.sh ${BACKEND_USER}@${BACKEND_IP}:/home/${BACKEND_USER}/ 
+scp -o StrictHostKeyChecking=no .backend_env setup_backend.sh ${BACKEND_USER}@${BACKEND_IP}:/home/${BACKEND_USER}/ 
 scp -o StrictHostKeyChecking=no .database_env setup_database.sh ${DATABASE_USER}@${DATABASE_IP}:/home/${DATABASE_USER}/
 
 ssh database <<'EOF'

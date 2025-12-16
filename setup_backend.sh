@@ -1,4 +1,5 @@
 #!/bin/bash
+
 set -euo pipefail
 
 ENV_FILE="/home/${USER}/.backend_env"
